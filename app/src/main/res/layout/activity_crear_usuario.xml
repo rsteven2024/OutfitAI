@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fondo">
-
+    android:background="@color/fondo"
+    android:orientation="vertical"
+    tools:context=".CrearUsuarioActivity">
     <ImageView
         android:id="@+id/logoImage"
         android:layout_width="180dp"
@@ -31,7 +33,7 @@
         app:layout_constraintTop_toBottomOf="@id/logoImage" />
 
     <EditText
-        android:id="@+id/usuarioCreado"
+        android:id="@+id/CrearUsuario"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginTop="450dp"
@@ -43,8 +45,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <EditText
-        android:id="@+id/contraseñaCreada"
+        android:id="@+id/crearContraseña"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginTop="500dp"
@@ -56,28 +59,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-    <Button
-        android:id="@+id/iniciarSesion"
-        android:layout_width="340dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="48dp"
-        android:layout_marginTop="145dp"
-        android:backgroundTint="@color/botones"
-        android:text="@string/btnISesion"
+    <EditText
+        android:id="@+id/confirmarContraseña"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginBottom="32dp"
+        android:hint="Confirmar Contraseña"
         android:textColor="@color/letra"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/welcomeText" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <Button
         android:id="@+id/btncrearUsuario"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="48dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="180dp"
         android:backgroundTint="@color/botones"
         android:text="@string/btnCrearUsuario"
         android:textColor="@color/letra"

@@ -15,10 +15,16 @@ class mainViewActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main_view)
 
-        val btnContinuar = findViewById<Button>(R.id.btnContinuar)
+        val btnContinuar = findViewById<Button>(R.id.iniciarSesion)
         btnContinuar.setOnClickListener {
-            navigateToPantallaPrincipalActivity()
+            pantallaPrincipalActivity()
         }
+        val btnCrearUsuario = findViewById<Button>(R.id.btncrearUsuario)
+        btnCrearUsuario.setOnClickListener {
+            crearUsuarioActivity()
+        }
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -27,8 +33,13 @@ class mainViewActivity : AppCompatActivity() {
     }
 
 
-    private fun navigateToPantallaPrincipalActivity() {
+    private fun pantallaPrincipalActivity() {
         val intent = Intent(this, PantallaPrincipalActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun crearUsuarioActivity() {
+        val intent = Intent(this, CrearUsuarioActivity::class.java)
         startActivity(intent)
     }
 }
