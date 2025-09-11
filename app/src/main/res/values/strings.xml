@@ -3,4 +3,9 @@
 
     <string name="btnISesion">Iniciar Sesión</string>
     <string name="btnCrearUsuario">Crear Usuario</string>
+    <string name="hint_usuario">Usuario:</string>
+    <string name="hint_Contraseña">Contraseña:</string>
+    <string name="hint_confirmar_contraseña">Confirmar Contraseña:</string>
+
+
 </resources>

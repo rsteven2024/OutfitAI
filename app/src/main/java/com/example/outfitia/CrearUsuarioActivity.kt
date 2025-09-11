@@ -23,20 +23,18 @@ class CrearUsuarioActivity : AppCompatActivity() {
             insets
         }
 
-
-
-        val etPassword = findViewById<EditText>(R.id.CrearUsuario)
-        val etConfirmPassword= findViewById<EditText>(R.id.confirmarContraseña)
-        val btnCrearUsuario  = findViewById<Button>(R.id.btncrearUsuario)
+        val etContraseña = findViewById<EditText>(R.id.etcontraseña)
+        val etConfirmarContraseña = findViewById<EditText>(R.id.etConfirmarContraseña)
+        val btnCrearUsuario = findViewById<Button>(R.id.btnCrearUsuario)
 
         btnCrearUsuario.setOnClickListener {
-            val espacioContraseña = etPassword.text.toString().trim()
-            val espacioCrearContraseña = etConfirmPassword.text.toString().trim()
+            val contra1 = etContraseña.text.toString().trim()
+            val contra2 = etConfirmarContraseña.text.toString().trim()
 
-            if (espacioContraseña.isEmpty() || espacioCrearContraseña.isEmpty()) {
+            if (contra1.isEmpty() || contra2.isEmpty()) {
                 Toast.makeText(this, "Ambos campos de contraseña son obligatorios", Toast.LENGTH_SHORT).show()
-            } else if (espacioContraseña != espacioCrearContraseña) {
-                etConfirmPassword.error = "Las contraseñas no coinciden"
+            } else if (contra1 != contra2) {
+                etConfirmarContraseña.error = "Las contraseñas no coinciden"
                 Toast.makeText(this, "Verifica que las contraseñas sean iguales", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "Usuario creado correctamente", Toast.LENGTH_SHORT).show()
@@ -44,6 +42,7 @@ class CrearUsuarioActivity : AppCompatActivity() {
             }
         }
     }
+
     private fun pantallaPrincipalActivity() {
         val intent = Intent(this, PantallaPrincipalActivity::class.java)
         startActivity(intent)

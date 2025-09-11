@@ -6,24 +6,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fondo"
-    android:orientation="vertical"
     tools:context=".CrearUsuarioActivity">
+
     <ImageView
         android:id="@+id/logoImage"
         android:layout_width="180dp"
         android:layout_height="180dp"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="48dp"
         android:src="@drawable/logooutfit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_margin="48dp"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/welcomeText"
+        android:id="@+id/Bienvenido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="24dp"
         android:text="¡Bienvenido a OutfitAI!"
         android:textColor="@color/letra"
         android:textSize="24sp"
@@ -33,52 +32,59 @@
         app:layout_constraintTop_toBottomOf="@id/logoImage" />
 
     <EditText
-        android:id="@+id/CrearUsuario"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="450dp"
-        android:layout_marginBottom="32dp"
-        android:text="Usuario:"
+        android:id="@+id/etUsuario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/hint_usuario"
         android:textColor="@color/letra"
-        android:textSize="14dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toBottomOf="@id/Bienvenido" />
 
     <EditText
-        android:id="@+id/crearContraseña"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="500dp"
-        android:layout_marginBottom="32dp"
-        android:hint="Contraseña"
+        android:id="@+id/etcontraseña"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/hint_Contraseña"
+        android:inputType="textPassword"
         android:textColor="@color/letra"
-        android:textSize="14dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/etUsuario" />
 
     <EditText
-        android:id="@+id/confirmarContraseña"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="550dp"
-        android:layout_marginBottom="32dp"
-        android:hint="Confirmar Contraseña"
+        android:id="@+id/etConfirmarContraseña"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/hint_confirmar_contraseña"
+        android:inputType="textPassword"
         android:textColor="@color/letra"
-        android:textSize="14dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toBottomOf="@id/etcontraseña" />
 
     <Button
-        android:id="@+id/btncrearUsuario"
-        android:layout_width="340dp"
+        android:id="@+id/btnCrearUsuario"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="48dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="48dp"
         android:backgroundTint="@color/botones"
         android:text="@string/btnCrearUsuario"
         android:textColor="@color/letra"
@@ -86,6 +92,6 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/welcomeText" />
+        app:layout_constraintTop_toBottomOf="@id/etConfirmarContraseña" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
