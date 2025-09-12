@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
@@ -7,28 +8,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OutfitIA">
-
+        <activity
+            android:name=".Recomendacion"
+            android:exported="false" />
+        <activity
+            android:name=".Closet"
+            android:exported="false" />
+        <activity
+            android:name=".Crear_Outfit"
+            android:exported="false" />
         <activity
             android:name=".mainViewActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".CrearUsuarioActivity"
             android:exported="false" />
-
         <activity
             android:name=".PantallaPrincipalActivity"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-
     </application>
 
 </manifest>
