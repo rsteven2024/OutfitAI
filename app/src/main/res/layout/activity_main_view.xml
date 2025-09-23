@@ -51,6 +51,7 @@
         android:hint="Contraseña"
         android:textColor="@color/letra"
         android:textSize="14dp"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
