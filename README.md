@@ -1,4 +1,4 @@
-Nombre del proyecto: OutfitIA
+Nombre del proyecto: OutfitAI
 
 Integrantes : Robin Lopez y Nicolas Quiceno
 
