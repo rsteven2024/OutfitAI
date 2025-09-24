@@ -9,6 +9,12 @@
     android:background="@color/fondo">
 
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&quot;Loguin y Crear user funcional conectado a firebase(authentication), algunos cambios de estilo en las lauyers de closet, recomendacion y mainview&quot;" />
+
     <Button
         android:id="@+id/btnCamara"
         android:layout_width="wrap_content"
