@@ -23,7 +23,7 @@ class CrearUsuarioActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_crear_usuario)
 
-        // Inicializar Firebase
+        // se inicia Firebase
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
 
@@ -48,13 +48,15 @@ class CrearUsuarioActivity : AppCompatActivity() {
             } else if (contra1 != contra2) {
                 etConfirmarContraseña.error = "Las contraseñas no coinciden"
             } else {
-                // Crear usuario en Firebase
+
+
+
                 auth.createUserWithEmailAndPassword(email, contra1)
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             val uid = auth.currentUser?.uid
 
-                            // Guardar datos en Firestore
+                            // aqui se guarda el usario en la authentication
                             val user = hashMapOf(
                                 "email" to email,
                                 "fechaRegistro" to FieldValue.serverTimestamp()

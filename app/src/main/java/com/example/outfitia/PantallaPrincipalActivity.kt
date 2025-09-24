@@ -14,6 +14,10 @@ class PantallaPrincipalActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_pantalla_principal)
 
+        val btnCerrarSesion = findViewById<Button>(R.id.cerrarSesion)
+        btnCerrarSesion.setOnClickListener {
+            cerrarSesion()
+        }
 
         val btnCrearOutfit = findViewById<Button>(R.id.btnCrearOutfit)
         btnCrearOutfit.setOnClickListener {
@@ -45,6 +49,11 @@ class PantallaPrincipalActivity : AppCompatActivity() {
     }
     private fun Recomendacion_Activity() {
         val intent = Intent(this, Recomendacion::class.java)
+        startActivity(intent)
+    }
+
+    private fun cerrarSesion(){
+        val intent = Intent(this, mainViewActivity::class.java)
         startActivity(intent)
     }
 }

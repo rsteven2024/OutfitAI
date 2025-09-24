@@ -20,7 +20,7 @@
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="24dp"
         android:text="¡Bienvenido a OutfitAI!"
         android:textColor="@color/letra"
         android:textSize="24sp"
@@ -33,36 +33,31 @@
         android:id="@+id/usuarioCreado"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:layout_marginTop="450dp"
-        android:layout_marginBottom="32dp"
-        android:hint="Usuario:"
+        android:hint="Usuario"
         android:textColor="@color/letra"
-        android:textSize="14dp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/welcomeText"
+        android:layout_marginTop="32dp" />
 
     <EditText
         android:id="@+id/contraseñaCreada"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:layout_marginTop="500dp"
-        android:layout_marginBottom="32dp"
         android:hint="Contraseña"
-        android:textColor="@color/letra"
-        android:textSize="14dp"
         android:inputType="textPassword"
+        android:textColor="@color/letra"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toBottomOf="@id/usuarioCreado"
+        android:layout_marginTop="16dp" />
 
     <Button
         android:id="@+id/iniciarSesion"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="48dp"
-        android:layout_marginTop="245dp"
         android:backgroundTint="@color/botones"
         android:text="@string/btnISesion"
         android:textColor="@color/letra"
@@ -70,14 +65,13 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/welcomeText" />
+        app:layout_constraintTop_toBottomOf="@id/contraseñaCreada"
+        android:layout_marginTop="24dp" />
 
     <Button
         android:id="@+id/btncrearUsuario"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="48dp"
-        android:layout_marginTop="290dp"
         android:backgroundTint="@color/botones"
         android:text="@string/btnCrearUsuario"
         android:textColor="@color/letra"
@@ -85,6 +79,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/welcomeText" />
+        app:layout_constraintTop_toBottomOf="@id/iniciarSesion"
+        android:layout_marginTop="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
