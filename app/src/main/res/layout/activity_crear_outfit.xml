@@ -26,7 +26,7 @@
     <!-- Spinner para seleccionar tipo de prenda -->
     <Spinner
         android:id="@+id/spinnerTipo"
-        android:layout_width="0dp"
+        android:layout_width="210dp"
         android:layout_height="wrap_content"
         android:entries="@array/tipos_prenda"
         android:layout_marginTop="16dp"
