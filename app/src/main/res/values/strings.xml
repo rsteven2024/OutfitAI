@@ -6,6 +6,8 @@
     <string name="hint_usuario">Usuario:</string>
     <string name="hint_Contraseña">Contraseña:</string>
     <string name="hint_confirmar_contraseña">Confirmar Contraseña:</string>
+    <string name="hint_Correo_Electronico">Correo Electronico:</string>
+
 
     <string-array name="tipos_prenda">
         <item>Camisa</item>

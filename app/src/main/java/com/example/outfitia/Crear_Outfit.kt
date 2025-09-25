@@ -23,7 +23,6 @@ class Crear_Outfit : AppCompatActivity() {
     private lateinit var photoFile: File
     private lateinit var photoUri: Uri
     private var currentImagePath: String? = null
-
     private lateinit var db: AppDatabase
     private lateinit var spinnerTipo: Spinner   // 👈 aquí declaramos el spinner
 
