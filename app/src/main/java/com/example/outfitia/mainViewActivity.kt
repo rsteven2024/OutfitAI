@@ -68,7 +68,7 @@ class mainViewActivity : AppCompatActivity() {
     private fun pantallaPrincipalActivity() {
         val intent = Intent(this, PantallaPrincipalActivity::class.java)
         startActivity(intent)
-        finish() // opcional, para que no regrese al login
+        finish()
     }
 
     private fun crearUsuarioActivity() {

@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     id("com.google.gms.google-services")
+    id("kotlin-kapt") // 👈 necesario para Room y Glide
 }
 
 android {
@@ -41,15 +42,23 @@ android {
 }
 
 dependencies {
-    // Firebase BOM (controla versiones automáticamente)
-    implementation(platform("com.google.firebase:firebase-bom:33.4.0"))
+    val room_version = "2.6.1"
 
-    // Firebase dependencias (sin versión explícita)
+    // Room
+    implementation("androidx.room:room-runtime:$room_version")
+    kapt("androidx.room:room-compiler:$room_version")
+    implementation("androidx.room:room-ktx:$room_version")
+
+    // Firebase
+    implementation(platform("com.google.firebase:firebase-bom:33.4.0"))
     implementation("com.google.firebase:firebase-auth-ktx")
     implementation("com.google.firebase:firebase-firestore-ktx")
     implementation("com.google.firebase:firebase-storage-ktx")
 
-    // AndroidX y Compose (estos sí puedes mantenerlos con tu catálogo)
+    // ML Kit
+    implementation("com.google.mlkit:image-labeling:17.0.9")
+
+    // AndroidX y Compose
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -62,6 +71,11 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation("com.google.mlkit:image-labeling:17.0.9")
+
+    // Glide (con KAPT habilitado arriba)
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    kapt("com.github.bumptech.glide:compiler:4.16.0")
 
     // Tests
     testImplementation(libs.junit)

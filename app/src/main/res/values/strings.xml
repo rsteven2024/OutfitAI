@@ -7,5 +7,13 @@
     <string name="hint_Contraseña">Contraseña:</string>
     <string name="hint_confirmar_contraseña">Confirmar Contraseña:</string>
 
+    <string-array name="tipos_prenda">
+        <item>Camisa</item>
+        <item>Pantalón</item>
+        <item>Zapatos</item>
+        <item>Chaqueta</item>
+    </string-array>
+
+
 
 </resources>
