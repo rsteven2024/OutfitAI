@@ -73,14 +73,14 @@ class Crear_Outfit : AppCompatActivity() {
             val tipoSeleccionado = spinnerTipo.selectedItem.toString()
 
             val recomendacion = when (tipoSeleccionado.lowercase()) {
-                "camisa" -> "Combínala con jeans azules 👖"
-                "pantalón", "pantalon" -> "Úsalo con una camiseta blanca 👕🧢"
-                "zapatos" -> "Perfectos con un pantalón formal 👖"
+                "camisa" -> "Combínala con jeans azules claros 👖"
+                "pantalón", "pantalon" -> "Úsalo con una camiseta blanca oversize 👕🧢"
+                "zapatos" -> "Perfectos con un pantalón Negro ancho 👖"
                 "chaqueta" -> "Queda genial con una bufanda 🧣"
                 else -> "Combínalo con accesorios llamativos 🌟"
             }
 
-            // 👇 Aquí completas el flujo: crear la entidad y guardarla
+            // flujo: crear la entidad y guardarla
             val prenda = Prenda(
                 imagePath = currentImagePath!!,
                 tipo = tipoSeleccionado,
